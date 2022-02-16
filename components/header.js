@@ -29,13 +29,13 @@ const headerLinks = [
 export default function Header() {
   return (
     <Popover className='relative bg-white'>
-      <div className='flex justify-between items-center py-6 px-6 lg:justify-start lg:space-x-10'>
+      <div className='flex justify-between items-center py-6 px-6 lg:pr-24 lg:justify-start lg:space-x-10'>
         <div>
           <a href='#' className='hidden lg:flex'>
             <span className='sr-only'>Mirador</span>
             <img className='h-8 w-auto sm:h-10' src='icon.svg' alt='logo' />
           </a>
-          <a href='#' className='lg:hidden'>
+          <a href='#' className='lg:hidden '>
             <span className='sr-only'>Mirador</span>
             <img className='h-14 w-14' src='small-logo.svg' alt='logo' />
           </a>
@@ -47,7 +47,7 @@ export default function Header() {
             <span className='sr-only'>Open menu</span>
             <img
               src='menu.svg'
-              className='h-10 w-10'
+              className='h-10 w-10 '
               aria-hidden='true'
               alt='menu'
             />

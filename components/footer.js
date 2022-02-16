@@ -79,7 +79,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className='w-full md:w-1/5 px-4 md:mb-0 hidden md:block'>
+          <div className='w-full md:w-1/5 px-4 md:mb-0 pr-24 hidden md:block'>
             <img
               className='h-54 md:float-right'
               src='/icon-white.svg'
