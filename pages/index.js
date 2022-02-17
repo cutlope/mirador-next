@@ -1,4 +1,6 @@
-/* This example requires Tailwind CSS v2.0+ */
+import Link from 'next/link'
+import { CheckIcon } from '@heroicons/react/solid'
+
 const CompanyLogos = [
   {
     imageUrl: '',
@@ -11,6 +13,16 @@ const CompanyLogos = [
   },
   {
     imageUrl: '',
+  },
+]
+
+const tiers = [
+  {
+    includedFeatures: [
+      'Supports Offer, Standard and Event Posts',
+      'Schedule Posts And Create Recurring Posts',
+      'Post To Multiple Locations At Once',
+    ],
   },
 ]
 
@@ -114,6 +126,204 @@ export default function Home() {
         </div>
       </div>
       {/* Logos End */}
+
+      {/* Features Start */}
+      <div className='relative pt-16 pb-32 overflow-hidden'>
+        <div className='text-center pb-12'>
+          <h2 className='sm:text-3xl font-normal tracking-tighter sm:tracking-wide text-2xl text-gray-900'>
+            The Platform Built To Showcase
+          </h2>
+          <h2 className='sm:text-3xl tracking-tighter font-normal sm:tracking-wide text-2xl text-gray-900'>
+            Your Google My Business Results.
+          </h2>
+        </div>
+        <div className='relative'>
+          <div className='flex flex-col-reverse lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
+            <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
+              <div>
+                <div className='items-center hidden lg:flex'>
+                  <span className='h-4 w-4 mr-2 rounded-xl flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-800'></span>
+                  <span> Posting</span>
+                </div>
+                <div className='mt-6'>
+                  <div className='text-center lg:text-left '>
+                    <h2 className='text-3xl font-normal tracking-tight text-gray-900'>
+                      Create your GMB
+                    </h2>
+                    <h2 className='text-3xl font-normal tracking-tight text-gray-900'>
+                      content calendar
+                    </h2>
+                    <p className='mt-4 text-lg text-gray-500 max-w-sm'>
+                      Lorem ipsum dolor sit amet, consectetur Nam et libero
+                      magna. Aliquam erat volutpat. Vivamus vitae volutpat nisi,
+                      non sagittis ex.
+                    </p>
+                  </div>
+                  <ul role='list' className='mt-6 space-y-4'>
+                    {tiers.map((tier, indx) => (
+                      <div key={indx} className='divide-y divide-gray-200'>
+                        <ul role='list' className='mt-6 space-y-4'>
+                          {tier.includedFeatures.map((feature) => (
+                            <li key={feature} className='flex space-x-3'>
+                              <CheckIcon
+                                className='flex-shrink-0 h-5 w-5 text-[#386C79]'
+                                aria-hidden='true'
+                              />
+                              <span className='text-sm text-gray-500'>
+                                {feature}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </ul>
+                  <div className='mt-6 text-center lg:text-left'>
+                    <Link href='#'>
+                      <a className='inline-flex px-10 py-2  border-2 border-miradorGreen text-base font-semibold rounded-full shadow-sm text-miradorGreen'>
+                        CTA Link
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='mt-12 sm:mt-16 lg:mt-0'>
+              <div className='px-6 md:px-20 sm:pl-6 lg:px-0 lg:m-0 lg:relative lg:h-full'>
+                <img
+                  className='w-full lg:absolute lg:left-0 lg:h-full lg:w-auto'
+                  src='/calendar.svg'
+                  alt=''
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='mt-24'>
+          <div className='flex flex-col-reverse lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
+            <div className='px-4 max-w-xl mx-auto sm:px-6 lg:pb-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2'>
+              <div>
+                <div className='items-center hidden lg:flex'>
+                  <span className='h-4 w-4 mr-2 rounded-xl flex items-center justify-center bg-[#56AB95]'></span>
+                  <span>Managing</span>
+                </div>
+                <div className='mt-6'>
+                  <div className='text-center lg:text-left '>
+                    <h2 className='text-3xl font-normal tracking-tight text-gray-900'>
+                      Manage all of your locations,
+                    </h2>
+                    <h2 className='text-3xl font-normal tracking-tight text-gray-900'>
+                      in one dashboard.
+                    </h2>
+                    <p className='mt-4 text-lg text-gray-500 max-w-sm'>
+                      Lorem ipsum dolor sit amet, consectetur Nam et libero
+                      magna. Aliquam erat volutpat. Vivamus vitae volutpat nisi,
+                      non sagittis ex.
+                    </p>
+                  </div>
+                  <ul role='list' className='mt-6 space-y-4'>
+                    {tiers.map((tier) => (
+                      <div key={tier.name} className='divide-y divide-gray-200'>
+                        <ul role='list' className='mt-6 space-y-4'>
+                          {tier.includedFeatures.map((feature) => (
+                            <li key={feature} className='flex space-x-3'>
+                              <CheckIcon
+                                className='flex-shrink-0 h-5 w-5 text-[#386C79]'
+                                aria-hidden='true'
+                              />
+                              <span className='text-sm text-gray-500'>
+                                {feature}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </ul>
+                  <div className='mt-6 text-center lg:text-left'>
+                    <Link href='#'>
+                      <a className='inline-flex px-10 py-2 border-2 border-[#56AB95] text-base font-semibold rounded-full shadow-sm text-[#56AB95]'>
+                        CTA Link
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='mt-12 sm:mt-16 lg:mt-0 lg:col-start-1'>
+              <div className='px-6 md:px-20 sm:pl-6 lg:px-0 lg:m-0 lg:relative lg:h-full'>
+                <img
+                  className='w-full lg:absolute lg:left-0 lg:h-full lg:w-auto mx-auto'
+                  src='/globe.svg'
+                  alt=''
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='mt-24'>
+          <div className='flex flex-col-reverse lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
+            <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
+              <div>
+                <div className='items-center hidden lg:flex'>
+                  <span className='h-4 w-4 mr-2 rounded-xl flex items-center justify-center bg-[#E7B443]'></span>
+                  <span> Posting</span>
+                </div>
+                <div className='mt-6'>
+                  <div className='text-center lg:text-left '>
+                    <h2 className='text-3xl font-normal tracking-tight text-gray-900'>
+                      Track rankings and visibility
+                    </h2>
+                    <h2 className='text-3xl font-normal tracking-tight text-gray-900'>
+                      for all of your locations.
+                    </h2>
+                    <p className='mt-4 text-lg text-gray-500 max-w-sm'>
+                      Lorem ipsum dolor sit amet, consectetur Nam et libero
+                      magna. Aliquam erat volutpat. Vivamus vitae volutpat nisi,
+                      non sagittis ex.
+                    </p>
+                  </div>
+                  <ul role='list' className='mt-6 space-y-4'>
+                    {tiers.map((tier) => (
+                      <div key={tier.name} className='divide-y divide-gray-200'>
+                        <ul role='list' className='mt-6 space-y-4'>
+                          {tier.includedFeatures.map((feature) => (
+                            <li key={feature} className='flex space-x-3'>
+                              <CheckIcon
+                                className='flex-shrink-0 h-5 w-5 text-[#386C79]'
+                                aria-hidden='true'
+                              />
+                              <span className='text-sm text-gray-500'>
+                                {feature}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </ul>
+                  <div className='mt-6 text-center lg:text-left'>
+                    <Link href='#'>
+                      <a className='inline-flex px-10 py-2  border-2 border-[#E7B443] text-base font-semibold rounded-full shadow-sm text-[#E7B443]'>
+                        CTA Link
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='mt-12 sm:mt-16 lg:mt-0'>
+              <div className='px-6 md:px-20 sm:pl-6 lg:px-0 lg:m-0 lg:relative lg:h-full'>
+                <img
+                  className='w-full lg:absolute lg:left-0 lg:h-full lg:w-auto mx-auto'
+                  src='/chart.svg'
+                  alt=''
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }

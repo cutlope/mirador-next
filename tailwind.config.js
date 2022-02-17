@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         mirador: '#982F5B',
+        miradorGreen: '#386C79',
       },
     },
   },
