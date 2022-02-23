@@ -1,13 +1,14 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
 
 const headerLinks = [
   {
     name: 'Link 1',
     description:
       'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    href: '/blog',
   },
   {
     name: 'Link 2',
@@ -58,12 +59,11 @@ export default function Header() {
         <div className='hidden lg:flex-1 lg:flex lg:items-center lg:justify-end'>
           <div className='flex space-x-10'>
             {headerLinks.map((item) => (
-              <a
-                key={item.name}
-                href='#'
-                className='text-2xl font-semibold text-mirador py-2'>
-                {item.name}
-              </a>
+              <Link href={item.href} key={item.name}>
+                <a className='text-2xl font-semibold text-mirador py-2'>
+                  {item.name}
+                </a>
+              </Link>
             ))}
 
             <a
