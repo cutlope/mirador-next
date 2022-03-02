@@ -13,17 +13,17 @@ const headerLinks = [
   {
     name: 'Link 2',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '/testimonial',
+    href: '/casestudy',
   },
   {
     name: 'Link 3',
     description: "Your customers' data will be safe and secure.",
-    href: '#',
+    href: '/solutions',
   },
   {
     name: 'Link 4',
     description: "Connect with third-party tools that you're already using.",
-    href: '#',
+    href: '/testimonial',
   },
 ]
 
