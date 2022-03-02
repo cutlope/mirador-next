@@ -244,6 +244,8 @@ export default function Home() {
       </div>
       {/* Logos End */}
 
+      {/* Index */}
+
       {/* Features Start */}
       <div className='relative pt-16 pb-32 overflow-hidden'>
         <div className='pb-12 text-center'>
@@ -254,13 +256,25 @@ export default function Home() {
             Your Google My Business Results.
           </h2>
         </div>
+        <div className=' md:grid-cols-3 justify-items-center gap-y-4 max-w-7xl mx-auto hidden lg:grid'>
+          <span> Posting</span>
+          <span> Managing</span>
+          <span> Tracking</span>
+          <span className='flex w-44 h-4 mr-2 rounded-xl bg-[#386c79]' />
+          <span className='flex w-44 h-4 mr-2 rounded-xl bg-[#56AB95]' />
+          <span className='flex w-44 h-4 mr-2 rounded-xl bg-[#E7B443]' />
+        </div>
         <div className='relative'>
+          <div className=' md:grid-cols-1 justify-items-center gap-y-4 lg:hidden grid'>
+            <span className='text-3xl'> Posting</span>
+            <span className='w-1/2 h-4 mr-2 rounded-xl bg-[#386c79]' />
+          </div>
           <div className='flex flex-col-reverse lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
             <div className='max-w-xl px-4 mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
               <div>
                 <div className='items-center hidden lg:flex'>
-                  <span className='flex items-center justify-center w-4 h-4 mr-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-800'></span>
-                  <span> Posting</span>
+                  <span className='flex items-center justify-center w-4 h-4 mr-2 rounded-xl bg-[#386c79]'></span>
+                  <span>Posting</span>
                 </div>
                 <div className='mt-6'>
                   <div className='text-center lg:text-left '>
@@ -317,6 +331,10 @@ export default function Home() {
           </div>
         </div>
         <div className='mt-24'>
+          <div className=' md:grid-cols-1 justify-items-center gap-y-4 lg:hidden grid'>
+            <span className='text-3xl'> Managing</span>
+            <span className='w-1/2 h-4 mr-2 rounded-xl bg-[#56AB95]' />
+          </div>
           <div className='flex flex-col-reverse lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
             <div className='max-w-xl px-4 mx-auto sm:px-6 lg:pb-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2'>
               <div>
@@ -379,6 +397,10 @@ export default function Home() {
           </div>
         </div>
         <div className='mt-24'>
+          <div className=' md:grid-cols-1 justify-items-center gap-y-4 lg:hidden grid'>
+            <span className='text-3xl'> Managing</span>
+            <span className='w-1/2 h-4 mr-2 rounded-xl bg-[#E7B443]' />
+          </div>
           <div className='flex flex-col-reverse lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
             <div className='max-w-xl px-4 mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
               <div>
@@ -444,11 +466,12 @@ export default function Home() {
       {/* Features End */}
 
       {/* CTA Start */}
-      <div className='bg-mirador rounded-full mx-auto max-w-6xl my-6 flex items-center justify-center'>
-        <img className='max-h-40 ' src='/Path 25.svg' alt='' />
+      <img className='max-h-40 mx-auto md:hidden' src='/Path 25.svg' alt='' />
+      <div className='bg-mirador md:rounded-full mx-auto max-w-6xl md:my-6 flex items-center justify-center'>
+        <img className='max-h-40 hidden md:block' src='/Path 25.svg' alt='' />
 
-        <div className='px-4 py-12 sm:px-6 lg:px-8'>
-          <div className='text-center sm:flex sm:justify-center'>
+        <div className='px-4 py-12 md:px-6 lg:px-8'>
+          <div className='text-center md:flex md:justify-center'>
             <span className='block mt-1 text-2xl tracking-tight'>
               <span className='font-semibold text-white'>
                 Lorem ipsum dolor sit amet,
@@ -528,10 +551,10 @@ export default function Home() {
       {/* Blog Post End */}
 
       {/* Contact Start */}
-      <div className=' bg-left-float bg-no-repeat bg-contain bg-right'>
+      <div className=' sm:bg-left-float bg-no-repeat bg-contain bg-right'>
         <h2 className='text-center text-3xl pb-4'>Talk to us</h2>
 
-        <div className='flex-auto overflow-y-auto px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24 bg-right-float bg-no-repeat bg-contain '>
+        <div className='flex-auto overflow-y-auto px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24 sm:bg-right-float bg-no-repeat bg-contain '>
           <div className='max-w-lg mx-auto lg:pt-8'>
             <form className='mt-6'>
               <div className='grid grid-cols-12 gap-y-6 gap-x-4'>
