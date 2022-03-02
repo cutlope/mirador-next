@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'fill-40': 'repeat(2, minmax(0, 1fr))',
+      },
       colors: {
         mirador: '#982F5B',
         miradorGreen: '#386C79',
@@ -18,5 +21,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 }
