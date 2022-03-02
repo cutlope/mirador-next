@@ -13,7 +13,7 @@ const headerLinks = [
   {
     name: 'Link 2',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    href: '/testimonial',
   },
   {
     name: 'Link 3',
@@ -32,11 +32,11 @@ export default function Header() {
     <Popover className='relative bg-white'>
       <div className='flex justify-between items-center py-6 px-6 lg:pr-24 lg:justify-start lg:space-x-10'>
         <div>
-          <a href='#' className='hidden lg:flex'>
+          <a href='/' className='hidden lg:flex'>
             <span className='sr-only'>Mirador</span>
             <img className='h-8 w-auto sm:h-10' src='icon.svg' alt='logo' />
           </a>
-          <a href='#' className='lg:hidden '>
+          <a href='/' className='lg:hidden '>
             <span className='sr-only'>Mirador</span>
             <img className='h-14 w-14' src='small-logo.svg' alt='logo' />
           </a>
@@ -86,7 +86,7 @@ export default function Header() {
         leaveTo='opacity-0 scale-95'>
         <Popover.Panel
           focus
-          className='absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden'>
+          className='absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-10'>
           <div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50'>
             <div className='pt-5 pb-6 px-5'>
               <div className='flex items-center justify-between'>
