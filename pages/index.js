@@ -583,6 +583,24 @@ export default function Home() {
       {/* Contact End */}
 
       {/* Testimonial Start */}
+      <div className='grid lg:grid-cols-2 lg:grid-flow-row gap-y-5 lg:gap-x-5 items-center'>
+        <div className='flex flex-col items-center gap-y-8 overflow-x-auto  z-10 lg:order-first relative lg:left-[20%] bottom-[20%]'>
+          <img src='/Group 202.svg' className='w-1/5' />
+          <p className='text-center text-4xl'>
+            "Insert a quote here about the business, as a testimonial."
+          </p>
+          <span className='text-3xl font-bold'>Client Name</span>
+          <button
+            className='px-4 py-2 border-black border rounded-full'
+            type='button'>
+            Read more
+          </button>
+        </div>
+        <div className='order-first lg:order-last justify-self-end '>
+          <img src='/Scroll Group 4.svg' alt='' />
+        </div>
+      </div>
+      {/* Testimonial End */}
     </main>
   )
 }
